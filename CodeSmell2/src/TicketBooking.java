@@ -1,9 +1,10 @@
 
-public class TicketBooking {
+public class TicketBooking implements TicketAction {
 
     private TicketPrinter ticketPrinter;
 
-    public void bookTicket(Customer customer, Ticket ticket) {
+    @Override
+    public void execute(Customer customer, Ticket ticket) {
         System.out.println("Memproses pemesanan tiket...");
         ticketPrinter.printTicket(customer, ticket);
         System.out.println("Pesanan selesai.");
